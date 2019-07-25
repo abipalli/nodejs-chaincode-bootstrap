@@ -2,12 +2,13 @@
     "org1": {
         "chaincode": [
             {
-                "name": "MyAssetContract",                
+                "name": "MyAssetContract",
                 "path": "dist/index.js",
                 "channels": [ "testchannel" ],
+                "init_func": "ping",
                 "init_args": [],
                 "instantiate": true,
-                "install": true 
+                "install": true
             }
         ]
     }
