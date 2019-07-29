@@ -17,13 +17,27 @@ fi
 
 
 CONFIGPATH="$(pwd)/deploy_config.json"
+CONFIG=`cat ${CONFIGPATH}`
+# echo $CONFIG; echo; echo;
+
+# echo $(dirname $0)
+
+# for org in $(echo $CONFIG | jq 'keys | .[]'); do
+#   echo $org
+# done
 
 
 # Install chaincode for all orgs' peers
-
-# install_cc ${CONFIGPATH} "node" $(pwd)
-
+if [[ -z $1 || $1 == "install" ]]; then
+  install_cc "${CONFIG}" "node" $(pwd)
+fi
 
 # Instantiate chaincode in channels
+if [[ -z $1 || $1 == "instantiate" ]]; then
+  instantiate_cc "${CONFIG}" node $(pwd)
+fi
 
-instantiate_cc ${CONFIGPATH} "node" $(pwd) 
+# Invoke init func on installed channels by installed organizations
+if [[ -z $1 || $1 == "invoke" ]]; then
+  invoke_cc "${CONFIG}" node $(pwd)
+fi

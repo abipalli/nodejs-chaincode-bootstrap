@@ -1,12 +1,15 @@
 {
-    "org1": {
+    "org1msp": {
         "chaincode": [
             {
-                "name": "MyAssetContract",
+                "cc_name": "MyAssetContract",
+                "cc_version": "1.0.0",
                 "path": "dist/index.js",
                 "channels": [ "testchannel" ],
-                "init_func": "ping",
+
+                "init_fn": "ping",
                 "init_args": [],
+
                 "instantiate": true,
                 "install": true
             }
