@@ -22,8 +22,8 @@ function install_cc {
       for channel in $(echo ${cc} | jq ".channels | .[]"); do
         local conn_profile="${SRC_DIR}/config/${org}-${channel}-connprofile.json"
         local admin_identity="${SRC_DIR}/config/${org}-admin.json"
-        local cc_name=$(echo ${cc} | jq '.cc_name')
-        local cc_version=$(echo ${cc} | jq '.cc_version')
+        local cc_name=$(cat ${SRC_DIR}/package.json | jq '.name')
+        local cc_version=$(cat ${SRC_DIR}/package.json | jq '.version')
 
         # echo "conn_profile...${conn_profile//\"}"
         # less ${conn_profile//\"}
@@ -64,8 +64,8 @@ function instantiate_cc {
         # local conn_profile="$org-$channel-connprofile.json"
         local conn_profile="${SRC_DIR}/config/${org}-${channel}-connprofile.json"
         local admin_identity="${SRC_DIR}/config/$org-admin.json"
-        local cc_name=$(echo ${cc} | jq '.cc_name')
-        local cc_version=$(echo ${SRC_DIR} | jq '.cc_version')
+        local cc_name=$(cat ${SRC_DIR}/package.json | jq '.name')
+        local cc_version=$(cat ${SRC_DIR}/package.json | jq '.version')
 
         local init_fn=$(echo ${cc} | jq '.init_fn')
         local init_args=$(echo ${cc} | jq '.init_args')
