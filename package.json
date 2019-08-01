@@ -1,5 +1,5 @@
 {
-    "name": "MyAssetContract",
+    "name": "MyAssetContract2",
     "version": "1.0.0",
     "description": "My Asset Contract",
     "main": "dist/index.js",
