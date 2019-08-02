@@ -1,6 +1,6 @@
 {
     "name": "MyAssetContract2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "My Asset Contract",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
