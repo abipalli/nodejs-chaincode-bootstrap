@@ -5,7 +5,7 @@
                 "path": "dist/index.js",
                 "channels": [ "channel1" ],
 
-                "init_fn": "ping",
+                "init_fn": "initLedger",
                 "init_args": [],
 
                 "instantiate": true,
