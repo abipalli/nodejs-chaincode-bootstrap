@@ -1,6 +1,6 @@
 {
-    "name": "toolchain-network",
-    "version": "1.0.0",
+    "name": "toolchain-network2",
+    "version": "1.0.1",
     "description": "FabCar contract implemented in TypeScript",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",

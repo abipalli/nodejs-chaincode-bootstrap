@@ -10,7 +10,7 @@
         "skipLibCheck": true
     },
     "include": [
-        "./src/**/*", "index.ts"
+        "./src/**/*", "src/index.ts"
     ],
     "exclude": [
         "./src/**/*.spec.ts"
