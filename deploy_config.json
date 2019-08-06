@@ -3,13 +3,13 @@
         "chaincode": [
             {                
                 "path": "dist/index.js",
-                "channels": [ "testchannel" ],
+                "channels": [ "channel1" ],
 
-                "init_fn": "initLedger",
-                "init_args": [],
-
+                "install": true,
+                
                 "instantiate": true,
-                "install": true
+                "init_fn": "initLedger",
+                "init_args": []
             }
         ]
     }
