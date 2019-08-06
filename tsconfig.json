@@ -9,9 +9,9 @@
         "skipLibCheck": true
     },
     "include": [
-        "./src/**/*"
+        "./src/*", "src/index.ts"
     ],
     "exclude": [
-        "./src/**/*.spec.ts"
+        "./src/*.spec.ts"
     ]
 }
