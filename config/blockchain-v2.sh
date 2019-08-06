@@ -20,7 +20,7 @@ function install_cc {
     for ccindex in $(echo ${DEPLOY_CONFIG} | jq ".${org}.chaincode |  keys | .[]"); do
       local cc=$(echo ${DEPLOY_CONFIG} | jq ".${org}.chaincode | .[${ccindex}]")      
       for channel in $(echo ${cc} | jq ".channels | .[]"); do
-        local conn_profile="${SRC_DIR}/config/${org}-${channel}-connprofile.json"
+        local conn_profile="${SRC_DIR}/config/${org}-connprofile.json"
         local admin_identity="${SRC_DIR}/config/${org}-admin.json"
         local cc_name=$(cat ${SRC_DIR}/package.json | jq '.name')
         local cc_version=$(cat ${SRC_DIR}/package.json | jq '.version')
@@ -62,7 +62,7 @@ function instantiate_cc {
         # echo $(echo ${cc} | jq '.init_args')
 
         # local conn_profile="$org-$channel-connprofile.json"
-        local conn_profile="${SRC_DIR}/config/${org}-${channel}-connprofile.json"
+        local conn_profile="${SRC_DIR}/config/${org}-connprofile.json"
         local admin_identity="${SRC_DIR}/config/$org-admin.json"
         local cc_name=$(cat ${SRC_DIR}/package.json | jq '.name')
         local cc_version=$(cat ${SRC_DIR}/package.json | jq '.version')
@@ -106,7 +106,7 @@ function invoke_cc {
       local cc=$(echo ${DEPLOY_CONFIG} | jq ".${org}.chaincode | .[${ccindex}]")
       for channel in $(echo ${cc} | jq ".channels | .[]"); do
         # local conn_profile="$org-$channel-connprofile.json"
-        local conn_profile="${SRC_DIR}/config/${org}-${channel}-connprofile.json"
+        local conn_profile="${SRC_DIR}/config/${org}-connprofile.json"
         local admin_identity="${SRC_DIR}/config/$org-admin.json"
         local cc_name=$(cat ${SRC_DIR}/package.json | jq '.name')
         local cc_version=$(cat ${SRC_DIR}/package.json | jq '.version')
