@@ -3,7 +3,7 @@
         "chaincode": [
             {                
                 "path": "dist/index.js",
-                "channels": [ "channel1" ],
+                "channels": [ "testchannel" ],
 
                 "init_fn": "initLedger",
                 "init_args": [],
