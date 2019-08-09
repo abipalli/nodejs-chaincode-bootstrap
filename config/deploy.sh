@@ -21,7 +21,7 @@ echo $CONFIG; echo; echo;
 # npm install
 
 
-
+# parse deploy_config.json for deployment activations
 for org in $(cat ${CONFIGPATH} | jq 'keys | .[]'); do
   for ccindex in $(cat ${CONFIGPATH} | jq ".${org}.chaincode | keys | .[]"); do
     cc=$(cat ${CONFIGPATH} | jq ".${org}.chaincode | .[${ccindex}]")
