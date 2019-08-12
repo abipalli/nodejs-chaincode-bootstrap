@@ -7,7 +7,7 @@
                 "path": "dist/index.js",
                 "channels": [ "channel1" ],
 
-                "install": false,
+                "install": true,
                 
                 "instantiate": true,
                 "init_fn": "initLedger",
