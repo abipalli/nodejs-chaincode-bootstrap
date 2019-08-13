@@ -2,10 +2,10 @@
     "org1msp": {
         "chaincode": [
             { 
-                "name": "test-network2",
+                "name": "test-node-struct",
                 "version": "1.0.0",               
                 "path": "dist/index.js",
-                "channels": [ "channel1" ],
+                "channels": [ "channel1" ], 
 
                 "install": true,
                 
