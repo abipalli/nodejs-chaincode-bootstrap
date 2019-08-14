@@ -5,7 +5,7 @@
 ## Chaincode Development Instructions
 * Create a new component directory under the [src](/src) folder for each component.
 * Populate this component directory with files to be deployed.
-* The [ping](/chaincode/ping) directory is provided as a chaincode component example. 
+* The [fabcar](/src/fabcar) directory is provided as a chaincode component example. 
 
 ## Chaincode Deployment Instructions (_Beta_)
 * Developing current directory skeleton to be used with `IBM Cloud Continuous Delivery` toolchain to deploy chaincode automatically to `IBM Blockchain Platform v2` via `fabric-cli v1.4`
