@@ -2,7 +2,7 @@
     "org1msp": {
         "chaincode": [
             { 
-                "name": "test-node-struct",
+                "name": "sample-node-toolchain",
                 "version": "1.0.0",               
                 "path": "dist/index.js",
                 "channels": [ "channel1" ], 
