@@ -14,11 +14,10 @@
 ```
 nodejs_chaincode_repository:
   ./config    
-    "[org_id]-[channel_id].json"
+    "<org_id>-<channel_id>.json"
      
   ./src
-    ./fabcar
-    [./component1]
+    ./fabcar    
     ...
 
   deploy_config.json
@@ -31,23 +30,23 @@ nodejs_chaincode_repository:
 ### Configuring `deploy_config.json`
 ```
 {
-  [ org msp id ]: {
+  <org msp id>: {
     "chaincode": [
       {
-        "name": [ chaincode name ],
-        "version": [ chaincode version ],
+        "name": <chaincode name>,
+        "version": <chaincode version>,
         
-        "path": [ relative chaincode path ],
+        "path": <relative chaincode path>,
         "channels": [
-          [ channel name ],
+          <channel name>,
           ...
         ],
 
-        "install": [ true , false ],
+        "install": <true , false>,
 
-        "instantiate": [ true, false ],
-        "init_fn": [ chaincode init function (default: "init") ]   
-        "init_args": [ chaincode init arguments (default: []) ]
+        "instantiate": <true, false>,
+        "init_fn": <chaincode init function (default: "init")>,   
+        "init_args": <chaincode init arguments (default: [])>
       },
       ...
     ]
