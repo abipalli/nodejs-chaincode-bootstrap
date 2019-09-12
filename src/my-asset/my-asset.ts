@@ -15,7 +15,12 @@
  * limitations under the License.
  */
 
-import { MyAssetContract } from './my-asset/my-asset-contract';
-export { MyAssetContract } from './my-asset/my-asset-contract';
+import { Object, Property } from 'fabric-contract-api';
 
-export const contracts: any[] = [ MyAssetContract ];
+@Object()
+export class MyAsset {
+
+    @Property()
+    public value: string;
+
+}

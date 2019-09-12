@@ -15,7 +15,10 @@
  * limitations under the License.
  */
 
-import { MyAssetContract } from './my-asset/my-asset-contract';
-export { MyAssetContract } from './my-asset/my-asset-contract';
+import { Shim } from 'fabric-shim';
 
-export const contracts: any[] = [ MyAssetContract ];
+export default class Logger {
+  public static getLogger(name: string) {
+    return Shim.newLogger(name);
+  }
+}
