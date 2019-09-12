@@ -12,19 +12,17 @@
 * Add all connection profiles exported from the IBM Blockchain Platform and rename them as `"org_id"-"channel_id".json"` (ex. _org1msp-channel1.json_)
 
 ```
-nodejs_chaincode_repository:
-  ./config    
-    "<org_id>-<channel_id>.json"
-     
-  ./src
-    ./fabcar    
-    ...
-
-  deploy_config.json
-
+nodejs_chaincode_repository:     
   LICENSE
-
   README.md
+  deploy_config.json
+  src/
+    ...
+  index.ts
+  tsconfig.json
+  package.json
+  package-lock.json
+
 ```
 
 ### Configuring `deploy_config.json`

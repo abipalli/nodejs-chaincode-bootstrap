@@ -2,12 +2,12 @@
     "org1msp": {
         "chaincode": [
             { 
-                "name": "sample-node-toolchain",
-                "version": "1.0.0",               
+                "name": "fabcar",
+                "version": "2.0.0",               
                 "path": "dist/index.js",
                 "channels": [ "channel1" ], 
 
-                "install": true,
+                "install": false,
                 
                 "instantiate": true,
                 "init_fn": "initLedger",

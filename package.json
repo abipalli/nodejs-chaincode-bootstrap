@@ -1,6 +1,6 @@
 {
-    "name": "toolchain-network8",
-    "version": "1.0.0",
+    "name": "fabcar-subchannel-ts",
+    "version": "1.0.1",
     "description": "FabCar contract implemented in TypeScript",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -9,7 +9,7 @@
         "npm": ">=5"
     },
     "scripts": {
-        "lint": "tslint -c tslint.json 'src/*.ts'",
+        "lint": "tslint -c tslint.json 'src/**/*.ts'",
         "pretest": "npm run lint",
         "test": "nyc mocha -r ts-node/register src/*.spec.ts",
         "start": "fabric-chaincode-node start",
@@ -21,7 +21,6 @@
     "author": "Hyperledger",
     "license": "Apache-2.0",
     "dependencies": {
-        "chai-as-promised": "^7.1.1",
         "fabric-contract-api": "~1.4.0",
         "fabric-shim": "~1.4.0"
     },

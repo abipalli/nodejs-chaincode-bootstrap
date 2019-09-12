@@ -5,12 +5,10 @@
         "moduleResolution": "node",
         "module": "commonjs",
         "declaration": true,
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "skipLibCheck": true
+        "sourceMap": true
     },
     "include": [
-      "src/index.ts","./src/**/*.ts"
+        "./src/**/*"
     ],
     "exclude": [
         "./src/**/*.spec.ts"
