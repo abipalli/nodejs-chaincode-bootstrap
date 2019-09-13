@@ -11,7 +11,9 @@
                 
                 "instantiate": true,
                 "init_fn": "initLedger",
-                "init_args": []
+                "init_args": [],
+                
+                "collections_config": "collections.json"
             }
         ]
     }
