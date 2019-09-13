@@ -37,7 +37,7 @@ nodejs_chaincode_repository:
     "chaincode": [
       {
         "name": <chaincode name>,
-        "version": <chaincode version>,
+        "version": <chaincode version, if not specified will be timestamp> (optional),
         
         "path": <relative chaincode path>,
         "channels": [
@@ -48,8 +48,10 @@ nodejs_chaincode_repository:
         "install": <true , false>,
 
         "instantiate": <true, false>,
-        "init_fn": <chaincode init function (default: "init")>,   
-        "init_args": <chaincode init arguments (default: [])>
+        "init_fn": <chaincode init function (default: "init")> (optional),   
+        "init_args": <chaincode init arguments (default: [])> (optional),
+
+        "collections_config": <path to collections json file> (optional)
       },
       ...
     ]
